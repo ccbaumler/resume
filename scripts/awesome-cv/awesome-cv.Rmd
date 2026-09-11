@@ -1,7 +1,7 @@
 ---
 name: Colton
 surname: Baumler
-position: "Graduate Student Candidate"
+position: "Bioinformatics and Data Scientist"
 pronouns: He/Him
 address: "Data Intensive Biology lab of the University of California, Davis"
 #phone: +1 555 555 5555
@@ -13,8 +13,7 @@ linkedin: colton-baumler
 orcid: 0000-0002-5926-7792
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "9e2e2e"
-aboutme: "I am deeply engaged in bioinformatics and mentorship. I excitedly wrangle data, craft software, and create dynamic mentorship opportunities."
-docname: awesomecv
+docname: Resumé
 output:
   vitae::awesomecv
 ---
@@ -43,25 +42,22 @@ source(file = here("data", "data.r"))
 
 ```
 
-# Research Interests
+# Professional Summary
 
- * Bioinformatically exploring the world of big, public data in new and interesting ways.
- * Combining scientific domains to create a pleasant end-user experience.
- * I have overcome many obstacles to be where I am today and I am just happy to be here.
+**Bioinformaticist and Data Scientist with 5+ years of experience** applying computational biology, data science, and software engineering to large-scale genomic datasets. Specialize in **Python, R, Unix, and Snakemake**, with expertise in k-mer–based sequence analysis and microbial pangenomics, developing accessible data architectures and high-throughput workflows. Developed **novel k-mer–based methods for precise taxonomic profiling and pangenomic interpretation**, engineered scalable genomic databases and saturation analyses, and created open-source software and reproducible computational workflows for analyzing millions of biological sequences.
 
-# Education
+# Skills
 
-```{r EDUCATION}
+```{r SKILLS, results='asis'}
+# Tell the chunk to print raw LaTeX instead of standard R output
+cat("\\begin{cvskills}\n")
 
-edu %>%
-  detailed_entries(
-    with = inst,
-    what = degree,
-    why = detail,
-    when = glue::glue("{startYear} - {endMonth} {endYear}",.na = ""),
-    where = where
-  )
+# Use glue_data to map your dataframe columns to the \cvskill{}{} LaTeX macro
+skills %>%
+  glue::glue_data("  \\cvskill{<<area>>}{<<skills>>}", .open = "<<", .close = ">>") %>%
+  cat(sep = "\n")
 
+cat("\\end{cvskills}\n")
 ```
 
 # Research Experience
@@ -79,90 +75,19 @@ exp %>%
 
 ```
 
-\pagebreak
+# Education
 
-# Professional Service
+```{r EDUCATION}
 
-```{r SERVICE}
-
-service %>%
+edu %>%
   detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = glue::glue("{startYear} - {endYear}{endMonth}",.na = ""),
-    where = where
-  )
-
-```
-
-# Community Involvement
-
-```{r COMMUNITY}
-
-community %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = glue::glue("{startYear} - {endYear}{endMonth}",.na = ""),
-    where = where
-  )
-
-```
-
-# Funding and Grants
-
-```{r FUNDS}
-
-funds %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = glue::glue("{startYear} - {endYear}",.na = ""),
-    where = where
-  )
-
-```
-
-# Honors and Awards
-
-```{r HONORS}
-
-honors %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = glue::glue("{month} {year}",.na = ""),
-    where = where
-  )
-
-```
-
-# Skills
-
-```{r SKILLS}
-
-skills %>%
-  detailed_entries(
-    with = area,
-    what = skills
-  )
-
-```
-
-# Presentations
-
-```{r PRESENTS}
-
-presents %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
+    with = glue::glue("{inst} | {detail}",.na = ""),
+    what = degree,
+    when = dplyr::if_else(
+      is.na(endMonth), 
+      glue::glue("{startYear} - {endYear}"), 
+      glue::glue("{startYear} - {endMonth} {endYear}")
+    ),
     where = where
   )
 

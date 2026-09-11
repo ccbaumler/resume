@@ -1,18 +1,23 @@
-# CV-template
+# Resume
 
-A template to create a Data Driven CV or Resume using R, YAML, LaTeX, and Github Actions
+This is my Data Driven Resume using R, YAML, LaTeX, and Github Actions
+
+## About
+
+The goal of this repo is to eliminate the tedium of fine-tuning resume/CV documents whenever new information is added. My current CV may be downloaded [by clicking here!](https://github.com/ccbaumler/CV/blob/main/docs/colton-baumler.pdf?raw=1) Whenever and wherever I am, I will be able to update this document by updating the `data/data.r` file. The repo will do the rest.
+
+## How to use
+
+This CV repository may be updated here on GitHub or locally once pulled. Update
+by modifying:
+
+1. the `awesome-cv` RMarkdown file in `scripts/` for any format changes to the document
+2. the `data` r file in `data/` for new information in the document
+
+Also, within the `docs/` directory is the final output, the `awesome-cv.pdf` pdf
+file. This CV is using a slightly customized `awesome-cv` latex cls file as a template (this may be found in `scripts/`).
 
 ## Install and Setup
-
-#### Repository
-
-1. Create your own CV or Resume by selecting the green button in the upper right-hand corner of [the repository](https://github.com/ccbaumler/CV-template)
-	- Select `Use this template`	
-	- Select `Create a new repository`
-
-2. Give your new repository a name like `CV` and `Create repository`
-
-This will allow you to make changes locally to the Rmarkdown scripts in the `scripts` directory and update the `data.r` file in the `data` directory.
 
 #### Local
 

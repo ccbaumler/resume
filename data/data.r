@@ -1,27 +1,18 @@
 edu <- tribble(
   ~degree, ~startYear,  ~endMonth, ~endYear, ~inst, ~where, ~detail,
-  "University of California, Davis", 2020, "Present", NA, "Doctor of Philosophy", "California, USA", "Biochemistry, Molecular, Cellular, and Developmental Biology Graduate Group",
-  "University of California, Davis", 2020, "Present", NA, "Doctor of Philosophy", "California, USA", "Space",
-  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Arts & Science", "Minnesota, USA", "Biology, BS",
-  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Arts & Science", "Minnesota, USA", "Chemistry, BA",
-  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Arts & Science", "Minnesota, USA", "Honors in Research",
-  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Arts & Science", "Minnesota, USA", "Minor in Mathematics",
-  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Arts & Science", "Minnesota, USA", "Magna Cum Laude",
-  "Hennepin Technical College", 2008, NA, 2010, "Associate of Applied Science in Automotive Mechanics", "Minnesota, USA", "Academic Excellence",
+  "University of California, Davis", 2020, NA, 2026, "Doctor of Philosophy", "California, USA", "Biochemistry, Molecular, Cellular, and Developmental Biology",
+  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Science", "Minnesota, USA", "Biology, mathematics minor",
+  "Concordia University, St. Paul", 2014, NA, 2018, "Bachelors of Arts", "Minnesota, USA", "Chemistry",
 )
 
 exp <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis - California", "Pangenomic and novel database curation for the sourmash software ecosystem",
-  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis - California", "Case vs control multiomic investigation of public data",
-  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis - California", "Image analysis and quantification pipeline for ectodermal derivatives specified in early development",
-  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis - California", "Professors for the Future (PFTF) Fellow",
-  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis - California", "NIH Molecular Cell Biology T32 Fellowship Affiliate",
-  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis - California", "NIH Initiative for Maximizing Student Development (IMSD) Affiliate",
-  "Junior Research Specialist", "University of California, Davis", NA, 2019, NA, 2020, "Davis - California", "Molecular evolution of thermal tolerance in coral",
-  "Junior Research Specialist", "University of California, Davis", NA, 2019, NA, 2020, "Davis - California", "Knot theory topology of dsDNA in bacteriophage DNA packaging",
-  "Undergraduate Research", "Concordia University, St. Paul", NA, 2017, NA, 2019, "St. Paul - Minnesota", "Novel artificial culture vessel for shell-less chick development",
-  "Tutor", "Concordia University, St. Paul", NA, 2016, NA, 2018, "St. Paul - Minnesota", "In subjects of Calculus, Physics, Chemistry, and Biology",
+  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis, CA", "Designed and deployed a novel k-mer pangenomic database architecture, boosting taxonomic profile precision by ~80% while preserving overall detection sensitivity.",
+  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis, CA", "Analyzed metadata across 83 studies to uncover systematic biases, formulating reproducible correction strategies to improve data integration across cohorts.",
+  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis, CA", "Engineered a high-throughput microscopy quantification pipeline, processing ~4,000 digital images to measure cell-fate specification in early developmental ectodermal tissues.",
+  "Graduate Research", "University of California, Davis", NA, 2020, "Present", NA, "Davis, CA", "Developed a novel literature management curriculum to address academic information overload, equipping 34 scholars across all career stages with scalable, open-source workflows to streamline literature discovery.",
+  "Junior Research Specialist", "University of California, Davis", NA, 2019, NA, 2020, "Davis, CA", "Created exploratory dashboard for molecular evolution of 13 thermal tolerance genes in 58 coral species",
+  "Undergraduate Research", "Concordia University, St. Paul", NA, 2017, NA, 2019, "St. Paul, MN", "Fabricated a novel artificial culture vessel for shell-less embryonic chicken development",
 )
 
 service <- tribble(
@@ -73,14 +64,8 @@ honors <- tribble(
 
 skills <- tribble(
   ~area, ~skills, ~year, ~where, ~detail,
-  "Programming Languages", "BASH, R, JavaScript, Python, SQL", " ", "University of California, Davis", NA,
-  "Markup Languages", "CSS, HTML, LaTeX, Markdown, RMarkdown", " ", "University of California, Davis", NA,
-  "Other Languages", "Snakemake", " ", "University of California, Davis", NA,
-  "Version Control", "Git/GitHub", " ", "University of California, Davis", NA,
-  "Text Editors", "RStudio, VIM/NeoVim", " ", "University of California, Davis", NA,
-  "Health", "Self-Aid Buddy Care (SABC), CPR Trained, AED Certified", " ", "United States Air Force", NA,
-  "Safety", "Self-Defense Coordinator, Sexual Assault Victim Advocate (SAVA)", " ", "United States Air Force", NA,
-  "Mechanics", "FCC GROL, Certified Aircraft Mechanic, Certified Automotive Mechanic", " ", "United States Air Force", NA,
+  "Technical Skills", "R | Python | Bash | Snakemake | SQL | JavaScript | CSS | HTML | LaTeX | Markdown | VIM/NeoVim | Git/GitHub | HPC/Slurm", " ", "University of California, Davis", NA,
+  "Professional Skills", "Scientific communication, presentation, training, and mentorship | Research design, reporting, and publication | Data quality, analysis, and visualization | Literature review and summation | Cross-discipline collaboration | Stakeholder communication", " ", "University of California, Davis", NA,
 )
 
 presents <- tribble(
